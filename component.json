@@ -4,11 +4,14 @@
   "description": "A components-compatible client side javascript library built on top of web sockets to connect to a custom server hosting live updates from globally distributed sensors",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "LearnBoost/socket.io-client": "*"
+  },
   "development": {},
   "license": "MIT",
   "main": "index.js",
   "scripts": [
+    "gordy.js",
     "index.js",
     "template.js"
   ],
