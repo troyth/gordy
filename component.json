@@ -1,0 +1,18 @@
+{
+  "name": "gordy",
+  "repo": "troyth/gordy",
+  "description": "A components-compatible client side javascript library built on top of web sockets to connect to a custom server hosting live updates from globally distributed sensors",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "gordy.css"
+  ]
+}
