@@ -1,20 +1,18 @@
 
 
-var gordy = require('./gordy');
+var gordy = require('./lib/gordy');
 
 var list_html = require('./template');
 
 
-var sensors = [];
 
-sensors.push({
-
-});
 
 module.exports = function(){
 	document.write( list_html );
 
-	for(var i = 0; i < sensors.length; i++){
+	var UI = new gordy.UI({
+		url: "http://www.site-to-site.com/api/v1/listen"
+	});
 
-	}
+	
 };
