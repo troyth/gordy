@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Site to Site Test</title>
+
+		<style>
+			body{
+				margin:0;
+				padding:0;
+			}
+
+			#wrapper{
+				padding:50px;
+			}
+
+			#list{
+				list-style: none;
+			}
+
+			#list li{
+				padding:0 10px 10px 0;
+				display: block;
+				float:left;
+			}
+
+			#list li img{
+				width:100px;
+				height:100px;
+			}
+		</style>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	</head>
+	<body>
+
+		<div id="wrapper">
+			<ul id="list">
+
+			</ul>
+		</div>
+
+		<script>
+			$(document).ready(function(){
+				var host = "http://api.sitetosite.co:3001";
+				var url = host + "/v1/machine/521177b27e8797511c000001/image/latest";
+
+				setInterval(function(){
+					$.ajax({
+					  url: url,
+					  success: function(data, textStatus, jqXHR){
+					  	console.log('\n\n\n\n\n\ndata[0].url:');
+					  	console.log('\n\n'+ data[0].url);
+
+					  	var html = '<li><img src="'+ host + data[0].url + '"></li>';
+					  	var $html = $(html);
+					  	$('#list').prepend($html);
+
+					  },
+					  dataType: 'json'
+					});
+				}, 60000);
+			});
+		</script>
+
+	</body>
+</html>
